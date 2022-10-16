@@ -8,6 +8,7 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import com.rave.tweak.databinding.ActivityMainBinding
+import android.widget.Button;
 
 class MainActivity : AppCompatActivity() {
 
@@ -22,15 +23,13 @@ class MainActivity : AppCompatActivity() {
         /*val root = */
         Runtime.getRuntime().exec("su")
 
-        val sw1 = findViewById<Switch>(R.id.switch1)
+        var balancedTweak = findViewById<Button>(R.id.button_id);
 
-        sw1?.setOnCheckedChangeListener({ _ , isChecked ->
-            val message = if (isChecked) "Switch1:ON" else "Switch1:OFF"
+        balancedTweak?.setOnClickListener()
+        {
+            //Toast.makeText(this@MainActivity, "Tapped", Toast.LENGTH_LONG).show()
 
-
-            Toast.makeText(this@MainActivity, message,
-                Toast.LENGTH_SHORT).show()
-        })
+        }
 
         val navController = findNavController(R.id.nav_host_fragment_activity_main)
         // Passing each menu ID as a set of Ids because each
