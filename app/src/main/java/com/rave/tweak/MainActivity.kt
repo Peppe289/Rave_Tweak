@@ -26,6 +26,8 @@ class MainActivity : AppCompatActivity() {
 
         sw1?.setOnCheckedChangeListener({ _ , isChecked ->
             val message = if (isChecked) "Switch1:ON" else "Switch1:OFF"
+
+
             Toast.makeText(this@MainActivity, message,
                 Toast.LENGTH_SHORT).show()
         })
