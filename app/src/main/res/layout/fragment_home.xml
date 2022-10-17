@@ -10,7 +10,7 @@
     <!-- Button added in the activity -->
 
     <Button
-        android:id="@+id/button_id"
+        android:id="@+id/balanced"
         android:layout_width="371dp"
         android:layout_height="59dp"
         android:paddingStart="10dp"
@@ -22,6 +22,34 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.683" />
+
+    <Button
+        android:id="@+id/powersave"
+        android:layout_width="371dp"
+        android:layout_height="59dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:text="PowerSave"
+        android:textColor="@android:color/background_light"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.812" />
+
+    <Button
+        android:id="@+id/performance"
+        android:layout_width="371dp"
+        android:layout_height="59dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:text="Performance"
+        android:textColor="@android:color/background_light"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.941" />
 
     <TextView
         android:id="@+id/textView"

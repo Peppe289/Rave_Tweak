@@ -26,20 +26,40 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        /*val root = */
+        // request root permission
         Runtime.getRuntime().exec("su")
 
-        //val inputString = File("/proc/version").reader().use { it.readText() }
+        // take kernel version with uname -r
         val shell = Shell("sh")
         val inputString = shell.run("uname -r").stdout()
-        var balancedTweak = findViewById<Button>(R.id.button_id)
-/*
-        balancedTweak?.setOnClickListener()
-        {
 
-        } */
+        /*
+         * Here button for tweak.
+         * Respectively for:
+         * - Performance;
+         * - Balanced;
+         * - Powersave.
+         */
+        val performance = findViewById<Button>(R.id.performance)
+        val balanced = findViewById<Button>(R.id.balanced)
+        val powersave = findViewById<Button>(R.id.powersave)
 
+
+        performance?.setOnClickListener() {
+
+        }
+
+        balanced?.setOnClickListener() {
+
+        }
+
+        powersave?.setOnClickListener() {
+
+        }
+
+        // this textView is for kernel name
         val textView: TextView = findViewById<TextView>(R.id.textView)
+        // show kernel name
         textView.text = inputString
 
         val navController = findNavController(R.id.nav_host_fragment_activity_main)
