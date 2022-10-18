@@ -13,12 +13,22 @@ import android.widget.TextView
 import com.jaredrummler.ktsh.Shell
 
 class MainActivity : AppCompatActivity() {
-/*
-    object StaticDef {
-        const val kernelver = "/proc/version"
-    } */
 
     private lateinit var binding: ActivityMainBinding
+
+    object StaticDef {
+        const val IOERROR = (-1)
+    }
+
+    fun write_node (patch: String, input: Int): Int {
+        try {
+            Shell("su").run(patch)
+        } catch (e: NumberFormatException) {
+            return StaticDef.IOERROR
+        }
+
+        return 0
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -43,7 +53,6 @@ class MainActivity : AppCompatActivity() {
         val performance = findViewById<Button>(R.id.performance)
         val balanced = findViewById<Button>(R.id.balanced)
         val powersave = findViewById<Button>(R.id.powersave)
-
 
         performance?.setOnClickListener() {
 
